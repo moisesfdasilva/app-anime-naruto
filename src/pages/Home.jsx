@@ -6,25 +6,23 @@ class Home extends React.Component {
     data: [],
   };
 
-  componentDidMount = async () => {
-    const response = await this.getCharacters();
-    this.setState = ({ data: response, loading: false });
-  };
+  async componentDidMount() {
+    await this.getCharacters();
+    this.setState({ loading: false });
+  }
 
   getCharacters = async () => {
-    try {
-      return await fetch('https://naruto-api.herokuapp.com/api/v1/characters')
-        .then((response) => response.json())
-        .then((characters) => characters);
-    } catch (error) {
-      return error;
-    }
+    const request = await fetch('https://naruto-api.herokuapp.com/api/v1/characters')
+    const requestJson = await request.json();
+    this.setState({ data: requestJson });
   };
 
   render() {
+    const { data } = this.state;
+    console.log(data);
     return (
       <div className="pokedex">
-        <h1> Character </h1>
+        <h1> Characters </h1>
       </div>
     );
   }

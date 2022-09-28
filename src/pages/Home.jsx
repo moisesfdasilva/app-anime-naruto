@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import CharactersCard from '../components/CharactersCard';
 import Header from '../components/Header';
@@ -41,4 +42,8 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+function mapStateToProps(state) {
+  return state;
+}
+
+export default connect(mapStateToProps)(Home);

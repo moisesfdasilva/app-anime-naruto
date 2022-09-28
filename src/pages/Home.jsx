@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CharactersCard from '../components/CharactersCard';
+
 class Home extends React.Component {
   state = {
     loading: true,
@@ -24,11 +26,12 @@ class Home extends React.Component {
       <main>
         <h1>Personagens do Naruto</h1>
         { data.map((character) => (
-          <section key={ character.id }>
-            <h3>{ character.name }</h3>
-            <img src={ character.images[0] } alt={ character.name } height="100"/>
-            <p>{ character.about[0] }</p>
-          </section>
+          <CharactersCard 
+            key={ character.id }
+            name={ character.name }
+            image={ character.images[0] }
+            about={ character.about[0] }
+          />
         )) }
       </main>
     );

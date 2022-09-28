@@ -18,12 +18,19 @@ class Home extends React.Component {
   };
 
   render() {
-    const { data } = this.state;
-    console.log(data);
+    const { data, loading } = this.state;
+    if(loading) { return <h1>LOADING...</h1> }
     return (
-      <div className="pokedex">
-        <h1> Characters </h1>
-      </div>
+      <main>
+        <h1>Personagens do Naruto</h1>
+        { data.map((character) => (
+          <section key={ character.id }>
+            <h3>{ character.name }</h3>
+            <img src={ character.images[0] } alt={ character.name } height="100"/>
+            <p>{ character.about[0] }</p>
+          </section>
+        )) }
+      </main>
     );
   }
 }

@@ -32,7 +32,7 @@ class Home extends React.Component {
             <CharactersCard 
               name={ character.name }
               image={ character.images[0] }
-              about={ character.about[0] }
+              about={ character.info['Ocupação'] }
             />
           </Link>
         )) }

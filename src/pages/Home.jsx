@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import CharactersCard from '../components/CharactersCard';
 
@@ -26,12 +27,13 @@ class Home extends React.Component {
       <main>
         <h1>Personagens do Naruto</h1>
         { data.map((character) => (
-          <CharactersCard 
-            key={ character.id }
-            name={ character.name }
-            image={ character.images[0] }
-            about={ character.about[0] }
-          />
+          <Link key={ character.id } to={`/charactersdetails/${ character.name }`}>
+            <CharactersCard 
+              name={ character.name }
+              image={ character.images[0] }
+              about={ character.about[0] }
+            />
+          </Link>
         )) }
       </main>
     );

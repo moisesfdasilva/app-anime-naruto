@@ -9,9 +9,8 @@ class App extends React.Component {
     return (
       <Switch>
         <Route exact path="/" component={ Home } />
-        <Route path="/charactersdetails" component={ CharactersDetails } />
+        <Route path="/charactersdetails/:id" render={ (props) => <CharactersDetails { ...props } /> } />
         <Route path="*" component={ NotFound } />
-        {/* <Route path="/album/:id" render={ (props) => <Album { ...props } /> } /> */}
       </Switch>
     );
   }

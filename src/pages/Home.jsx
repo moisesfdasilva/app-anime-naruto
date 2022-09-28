@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import CharactersCard from '../components/CharactersCard';
+import Header from '../components/Header';
 
 class Home extends React.Component {
   state = {
@@ -25,7 +26,7 @@ class Home extends React.Component {
     if(loading) { return <h1>LOADING...</h1> }
     return (
       <main>
-        <h1>Personagens do Naruto</h1>
+        <Header />
         { data.map((character) => (
           <Link key={ character.id } to={`/charactersdetails/${ character.name }`}>
             <CharactersCard 

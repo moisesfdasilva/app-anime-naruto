@@ -1,56 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import Header from '../components/Header';
 
 class CharactersDetails extends React.Component {
-  state = {
-    loading: true,
-    characterData: [],
-    moreInfo: [],
-  };
-
-  async componentDidMount() {
-    const { match: { params: { name } } } = this.props;
-    await this.getCharacter(name);
-    this.setState({ loading: false });
-  }
-
-  getCharacter = async (name) => {
-    const request = await fetch('https://naruto-api.herokuapp.com/api/v1/characters')
-    const requestJson = await request.json();
-    const characterData = requestJson.find((character) => (character.name === name))
-    const { info } = characterData;
-    const moreInfo = Object.entries(info);
-    this.setState({ characterData, moreInfo });
-  };
-
   render() {
-    const { characterData, loading, moreInfo } = this.state;
-    if(loading) { return <h1>LOADING...</h1> }
+    const { characterDetail } = this.props;
+    const { info } = characterDetail;
+    const moreInfo = Object.entries(info);
     return (
       <main>
         <Header />
-        <h2>{`Personagem - ${characterData.name}:`}</h2>
-        <p>{ characterData.info['Ocupação']}</p>
-        <img src={ characterData.images[0] } alt={ characterData.name } height="300"/>
+        <h2>{`Personagem - ${characterDetail.name}:`}</h2>
+        <p>{ characterDetail.info['Ocupação']}</p>
+        <img src={ characterDetail.images[0] } alt={ characterDetail.name } height="300"/>
         <h3>Sobre o Personagem:</h3>
-        { characterData.about.map((info, index) => (
+        { characterDetail.about.map((info, index) => (
           <p key={ index }>{ info }</p>
         )) }
         <h3>Imagens do Personagem:</h3>
-        { characterData.images.map((image, index) => (
-          <img key={ index } src={ image } alt={ characterData.name } height="100"/>
+        { characterDetail.images.map((image, index) => (
+          <img key={ index } src={ image } alt={ characterDetail.name } height="100"/>
         )) }
         <h3>Mais Informações do Personagem:</h3>
         { moreInfo.map((text, index) => (
           <p key={ index }>{`${text[0]}:${text[1]}`}</p>
         )) }
         <h3>Referências Bibliográficas:</h3>
-        <p>{`Narutopedia: <${characterData.page}>.`}</p>
+        <p>{`Narutopedia: <${characterDetail.page}>.`}</p>
       </main>
     );
   }
+}
+
+function mapStateToProps(state) {
+  const { characterDetail } = state
+  return {
+    characterDetail: characterDetail.characterInfo,
+  };
 }
 
 CharactersDetails.propTypes = {
@@ -64,4 +52,4 @@ CharactersDetails.propTypes = {
   }).isRequired,
 };
 
-export default CharactersDetails;
+export default connect(mapStateToProps)(CharactersDetails);

@@ -1,16 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import CharactersCard from '../components/CharactersCard';
 import Header from '../components/Header';
-import { fetchWithThunk } from '../redux/action';
+import { fetchWithThunk, actSelectCharacter } from '../redux/action';
 
 class Home extends React.Component {
   async componentDidMount() {
     const { dispatch } = this.props;
     dispatch(fetchWithThunk());
   }
+
+  goToCharactersDetails = (characterInfo) => {
+    const { history, dispatch } = this.props;
+    dispatch(actSelectCharacter(characterInfo));
+    history.push(`/charactersdetails/${ characterInfo.name }`);
+  };
 
   render() {
     const { data, loading } = this.props;
@@ -20,13 +26,14 @@ class Home extends React.Component {
       <main>
         <Header />
         { data.map((character) => (
-          <Link key={ character.id } to={`/charactersdetails/${ character.name }`}>
-            <CharactersCard 
-              name={ character.name }
-              image={ character.images[0] }
-              about={ character.info['Ocupação'] }
-            />
-          </Link>
+          <CharactersCard
+            key={ character.id }
+            characterInfo={ character }
+            name={ character.name }
+            image={ character.images[0] }
+            about={ character.info['Ocupação'] }
+            goToCharactersDetails={ this.goToCharactersDetails }
+          />
         )) }
       </main>
     );
@@ -40,5 +47,10 @@ function mapStateToProps(state) {
     loading: characterReducer.loading,
   };
 }
+
+Home.proptype = {
+  history: PropTypes.string,
+  dispatch: PropTypes.object,
+}.isRequired;
 
 export default connect(mapStateToProps)(Home);

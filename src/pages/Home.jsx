@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import CharactersCard from '../components/CharactersCard';
 import Header from '../components/Header';
+import { fetchWithThunk } from '../redux/action';
 
 class Home extends React.Component {
   state = {
@@ -14,6 +15,9 @@ class Home extends React.Component {
   async componentDidMount() {
     await this.getCharacters();
     this.setState({ loading: false });
+
+    const { dispatch } = this.props;
+    dispatch(fetchWithThunk());
   }
 
   getCharacters = async () => {
@@ -24,6 +28,10 @@ class Home extends React.Component {
 
   render() {
     const { data, loading } = this.state;
+    
+    const abc = this.props;
+    console.log(abc);
+    
     if(loading) { return <h1>LOADING...</h1> }
     return (
       <main>
@@ -43,7 +51,11 @@ class Home extends React.Component {
 }
 
 function mapStateToProps(state) {
-  return state;
+  const { characterReducer } = state;
+  return {
+    data: characterReducer.data,
+    loading: characterReducer.loading,
+  };
 }
 
 export default connect(mapStateToProps)(Home);

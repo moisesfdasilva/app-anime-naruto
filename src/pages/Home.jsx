@@ -7,32 +7,15 @@ import Header from '../components/Header';
 import { fetchWithThunk } from '../redux/action';
 
 class Home extends React.Component {
-  state = {
-    loading: true,
-    data: [],
-  };
-
   async componentDidMount() {
-    await this.getCharacters();
-    this.setState({ loading: false });
-
     const { dispatch } = this.props;
     dispatch(fetchWithThunk());
   }
 
-  getCharacters = async () => {
-    const request = await fetch('https://naruto-api.herokuapp.com/api/v1/characters')
-    const requestJson = await request.json();
-    this.setState({ data: requestJson });
-  };
-
   render() {
-    const { data, loading } = this.state;
-    
-    const abc = this.props;
-    console.log(abc);
-    
+    const { data, loading } = this.props;
     if(loading) { return <h1>LOADING...</h1> }
+
     return (
       <main>
         <Header />

@@ -15,7 +15,7 @@ const actGetCharactersDataSucess = (data) =>  ({
   },
 });
 
-const actGetCharactersFail = (data) =>  ({
+const actGetCharactersFail = () =>  ({
   type: GET_CHARACTERS_DATA_FAIL,
 });
 
@@ -23,7 +23,7 @@ function fetchWithThunk() {
   return async (dispatch) => {
     dispatch(actFetchCharactersData());
     try {
-      const { data } = await getCharacters();
+      const data = await getCharacters();
       dispatch(actGetCharactersDataSucess(data));
     } catch(error) {
       dispatch(actGetCharactersFail());

@@ -1,17 +1,8 @@
-import { combineReducers, legacy_createStore as createStore } from 'redux';
+import { legacy_createStore as createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
-const INITIAL_STATE = {
-  abc: '',
-}
+import rootReducer from '../reducers';
 
-function characterReducer(state = INITIAL_STATE, action) {
-  return state;
-}
-
-const rootReducer = combineReducers({
-  characterReducer,
-});
-
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;

@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 class Header extends React.Component {
   render() {
     return (
-      <header class='card-header'>
+      <header
+        class='card-header has-background-warning-light is-justify-content-center'
+      >
         <div>
           <h1 class="title is-2 is-spaced">Personagens da Série Naruto</h1>
           <Link to='/'>

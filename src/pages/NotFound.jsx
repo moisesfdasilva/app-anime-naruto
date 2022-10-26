@@ -1,16 +1,20 @@
 import React from 'react';
-
 import Header from '../components/Header';
+import Footer from '../components/Footer';
+import '../style/bulma.css';
 
 class NotFound extends React.Component {
   render() {
     const linkNotFound = 'https://nerdhits.com.br/wp-content/uploads/2022/03/naruto-pergaminho-dos-selos.jpg';
     return (
-      <main>
+      <section>
         <Header />
-        <img src={ linkNotFound } alt='linkNotFound' height="300"/>
-        <h1> Página não encontrada! </h1>
-      </main>
+        <div class="has-background-warning-light mt-4">
+          <h1 class="subtitle is-3"> Página não encontrada! </h1>
+          <img src={ linkNotFound } alt="linkNotFound"/>
+        </div>
+        <Footer />
+      </section>
     );
   }
 }

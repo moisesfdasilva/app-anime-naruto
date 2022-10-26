@@ -1,9 +1,9 @@
 * {
   background-color: transparent;
-  /* background-color: beige; */
+  text-align: center;
 }
 
 #image-height-limit {
   height: 200px;
-  border: 1px solid gray;
+  border: 2px solid goldenrod;
 }

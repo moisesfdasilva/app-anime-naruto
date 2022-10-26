@@ -5,8 +5,6 @@ import CharactersCard from '../components/CharactersCard';
 import Header from '../components/Header';
 import { fetchWithThunk, actSelectCharacter } from '../redux/action';
 import Footer from '../components/Footer';
-import '../style/bulma.css';
-import '../style/style.css';
 
 class Home extends React.Component {
   async componentDidMount() {

@@ -5,9 +5,14 @@ class CharactersCard extends React.Component {
   render() {
     const { name, image, about, characterInfo, goToCharactersDetails } = this.props;
     return (
-      <section>
-        <h3>{ name }</h3>
-        <img src={ image } alt={ name } height="100"/>
+      <section class='card'>
+        <br />
+        <h3 class='subtitle is-4'>{ name }</h3>
+        <img
+          id='image-height-limit'
+          src={ image }
+          alt={ name }
+        />
         <p>{ about }</p>
         <button
           type='button'

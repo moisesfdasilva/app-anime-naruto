@@ -1,4 +1,4 @@
-import { SELECT_CHARACTER } from '../action'
+import { SELECT_CHARACTER } from '../action';
 
 const INITIAL_STATE = {
   loading: true,

@@ -1,10 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-
 import CharactersCard from '../components/CharactersCard';
 import Header from '../components/Header';
 import { fetchWithThunk, actSelectCharacter } from '../redux/action';
+import Footer from '../components/Footer';
+import '../style/bulma.css';
+import '../style/style.css';
 
 class Home extends React.Component {
   async componentDidMount() {
@@ -23,19 +25,22 @@ class Home extends React.Component {
     if(loading) { return <h1>LOADING...</h1> }
 
     return (
-      <main>
+      <div>
         <Header />
-        { data.map((character) => (
-          <CharactersCard
-            key={ character.id }
-            characterInfo={ character }
-            name={ character.name }
-            image={ character.images[0] }
-            about={ character.info['Ocupação'] }
-            goToCharactersDetails={ this.goToCharactersDetails }
-          />
-        )) }
-      </main>
+        <main>
+          { data.map((character) => (
+            <CharactersCard
+              key={ character.id }
+              characterInfo={ character }
+              name={ character.name }
+              image={ character.images[0] }
+              about={ character.info['Ocupação'] }
+              goToCharactersDetails={ this.goToCharactersDetails }
+            />
+          )) }
+        </main>
+        <Footer />
+      </div>
     );
   }
 }

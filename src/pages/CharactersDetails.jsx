@@ -12,7 +12,7 @@ class CharactersDetails extends React.Component {
     return (
       <main>
         <Header />
-        <article class="card has-background-warning-light mt-4">
+        <section id="main-padding-top" class="card has-background-warning-light mt-4">
           <section class="card-content">
             <div class="content">
               <h2>{`Personagem - ${characterDetail.name}:`}</h2>
@@ -44,7 +44,7 @@ class CharactersDetails extends React.Component {
               <p>{`Narutopedia: <${characterDetail.page}>.`}</p>
             </div>
           </section>
-        </article>
+        </section>
         <Footer />
       </main>
     );

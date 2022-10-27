@@ -5,10 +5,10 @@ class CharactersCard extends React.Component {
   render() {
     const { name, image, about, characterInfo, goToCharactersDetails } = this.props;
     return (
-      <section class="card has-background-warning-light mt-4">
-        <div class="card-content">
-          <div class="content">
-            <h3 class="subtitle is-3">{ name }</h3>
+      <section className="card has-background-warning-light mt-4">
+        <div className="card-content">
+          <div className="content">
+            <h3 className="subtitle is-3">{ name }</h3>
             <img
               id="char-card-image-height-limit"
               src={ image }
@@ -16,7 +16,7 @@ class CharactersCard extends React.Component {
             />
             <p>{ about }</p>
             <button
-              class="button is-warning"
+              className="button is-warning"
               type="button"
               onClick={ () => goToCharactersDetails(characterInfo) }
               >

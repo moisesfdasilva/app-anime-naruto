@@ -12,9 +12,9 @@ class CharactersDetails extends React.Component {
     return (
       <div>
         <Header />
-        <main id="main-padding-top" class="card has-background-warning-light mt-4">
-          <section class="card-content">
-            <div class="content">
+        <main id="main-padding-top" className="card has-background-warning-light mt-4">
+          <section className="card-content">
+            <div className="content">
               <h2>{`Personagem - ${characterDetail.name}:`}</h2>
               <p>{ characterDetail.info['Ocupação']}</p>
               <img

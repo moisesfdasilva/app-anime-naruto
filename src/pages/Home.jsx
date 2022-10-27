@@ -21,7 +21,6 @@ class Home extends React.Component {
   render() {
     const { data, loading } = this.props;
     if(loading) { return <h1>LOADING...</h1> }
-
     return (
       <div>
         <Header />

@@ -8,8 +8,8 @@ class NotFound extends React.Component {
     return (
       <div>
         <Header />
-        <main id="main-padding-top" class="has-background-warning-light mt-4">
-          <h1 class="subtitle is-3"> Página não encontrada! </h1>
+        <main id="main-padding-top" className="has-background-warning-light mt-4">
+          <h1 className="subtitle is-3"> Página não encontrada! </h1>
           <img src={ linkNotFound } alt="linkNotFound"/>
         </main>
         <Footer />

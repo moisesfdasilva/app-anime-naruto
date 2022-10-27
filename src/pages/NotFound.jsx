@@ -6,14 +6,14 @@ class NotFound extends React.Component {
   render() {
     const linkNotFound = 'https://nerdhits.com.br/wp-content/uploads/2022/03/naruto-pergaminho-dos-selos.jpg';
     return (
-      <section>
+      <div>
         <Header />
-        <div id="main-padding-top" class="has-background-warning-light mt-4">
+        <main id="main-padding-top" class="has-background-warning-light mt-4">
           <h1 class="subtitle is-3"> Página não encontrada! </h1>
           <img src={ linkNotFound } alt="linkNotFound"/>
-        </div>
+        </main>
         <Footer />
-      </section>
+      </div>
     );
   }
 }

@@ -10,9 +10,9 @@ class CharactersDetails extends React.Component {
     const { info } = characterDetail;
     const moreInfo = Object.entries(info);
     return (
-      <main>
+      <div>
         <Header />
-        <section id="main-padding-top" class="card has-background-warning-light mt-4">
+        <main id="main-padding-top" class="card has-background-warning-light mt-4">
           <section class="card-content">
             <div class="content">
               <h2>{`Personagem - ${characterDetail.name}:`}</h2>
@@ -44,9 +44,9 @@ class CharactersDetails extends React.Component {
               <p>{`Narutopedia: <${characterDetail.page}>.`}</p>
             </div>
           </section>
-        </section>
+        </main>
         <Footer />
-      </main>
+      </div>
     );
   }
 }

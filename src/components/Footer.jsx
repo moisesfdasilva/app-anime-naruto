@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Footer extends React.Component {
   render() {
@@ -8,10 +9,12 @@ class Footer extends React.Component {
           <h4>Série Naruto:</h4>
           <p>Criada por Masashi Kishimoto</p>
           <p>Produzida pelo Studio Pierrot e Aniplex</p>
-          <img
-            src="https://seeklogo.com/images/C/cloud-akatsuki-logo-17E3DF7FAC-seeklogo.com.png"
-            alt="logo"
-          />
+          <Link to="/aternatecharacterslist">
+            <img
+              src="https://seeklogo.com/images/C/cloud-akatsuki-logo-17E3DF7FAC-seeklogo.com.png"
+              alt="logo"
+            />
+          </Link>
         </div>
       </footer>
     );

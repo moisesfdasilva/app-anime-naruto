@@ -3,7 +3,21 @@
   text-align: center;
 }
 
-#image-height-limit {
+#header-top-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1
+}
+
+#main-padding-top {
+  padding-top: 110px;
+  /* 110px */
+  /* 155px */
+}
+
+#char-card-image-height-limit {
   height: 200px;
   border: 2px solid goldenrod;
 }
@@ -16,4 +30,16 @@
 #image-detail-limit-2 {
   height: 200px;
   border: 2px solid goldenrod;
+}
+
+@media screen and (max-width: 664px) {
+  #main-padding-top {
+    padding-top: 155px;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  #main-padding-top {
+    padding-top: 195px;
+  }
 }

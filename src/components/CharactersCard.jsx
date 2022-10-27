@@ -10,7 +10,7 @@ class CharactersCard extends React.Component {
           <div class="content">
             <h3 class="subtitle is-3">{ name }</h3>
             <img
-              id="image-height-limit"
+              id="char-card-image-height-limit"
               src={ image }
               alt={ name }
             />

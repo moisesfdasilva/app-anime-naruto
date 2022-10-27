@@ -25,7 +25,7 @@ class Home extends React.Component {
     return (
       <div>
         <Header />
-        <main>
+        <main id="main-padding-top">
           { data.map((character) => (
             <CharactersCard
               key={ character.id }

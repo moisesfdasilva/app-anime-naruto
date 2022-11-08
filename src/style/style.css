@@ -1,0 +1,47 @@
+* {
+  background-color: transparent;
+  text-align: center;
+}
+
+.image-background-1 {
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0bedb362-1325-47fe-8fb8-8a1224de0221/de249w1-bafd1a84-0e87-4280-863f-16eea725afab.png/v1/fill/w_1192,h_670,q_70,strp/akatsuki_wallpaper_by_sailortrekkie92_de249w1-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvMGJlZGIzNjItMTMyNS00N2ZlLThmYjgtOGExMjI0ZGUwMjIxXC9kZTI0OXcxLWJhZmQxYTg0LTBlODctNDI4MC04NjNmLTE2ZWVhNzI1YWZhYi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.p3w4wmT2to0QRRw1FQJpvisL7TdiH51XugL9P8yy5vk");
+}
+
+#header-top-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1
+}
+
+#main-padding-top {
+  padding-top: 110px;
+}
+
+#char-card-image-height-limit {
+  height: 200px;
+  border: 2px solid goldenrod;
+}
+
+#image-detail-limit-1 {
+  height: 300px;
+  border: 2px solid goldenrod;
+}
+
+#image-detail-limit-2 {
+  height: 200px;
+  border: 2px solid goldenrod;
+}
+
+@media screen and (max-width: 664px) {
+  #main-padding-top {
+    padding-top: 155px;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  #main-padding-top {
+    padding-top: 195px;
+  }
+}

@@ -27,6 +27,4 @@ Para executar a aplicação, deve ser realizado:
   Executar, através do comando npm start.
 
 # Contato
-<div align="left">
-  <a href="https://github.com/moisesfdasilva/app-anime-naruto">
-</div>
+<https://github.com/moisesfdasilva/app-anime-naruto">

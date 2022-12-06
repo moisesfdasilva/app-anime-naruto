@@ -3,6 +3,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 class AlternateCharactersList extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div>

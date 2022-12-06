@@ -16,4 +16,4 @@ Aplicação em funcionamento, com os testes em React Testing Library (RTL) em de
 Primeiramente deve ser realizado o Fork e o Clone do repositório. Dentro da pasta realize a instalação das dependências, através do comando npm install, e execute o projeto, através do comando npm start.
 
 # Contato
-[GitHub: Moisés Fernandes](https://github.com/moisesfdasilva/app-anime-naruto)
+[GitHub: Repositório-app-anime-naruto](https://github.com/moisesfdasilva/app-anime-naruto)

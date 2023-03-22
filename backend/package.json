@@ -7,7 +7,7 @@
     "test": "jest",
     "start": "ts-node src/server.ts",
     "dev": "ts-node-dev src/server.ts",
-    "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create"
+    "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
   },
   "keywords": [],
   "author": "",

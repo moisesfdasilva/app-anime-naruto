@@ -31,3 +31,5 @@ class Character {
     this._page = page;
   }
 }
+
+export default Character;

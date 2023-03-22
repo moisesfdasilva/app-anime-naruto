@@ -33,12 +33,12 @@ services:
       - 3000:3000
     # Configura as variáveis de ambiente dentro do container
     environment:
-      - APP_PORT=3000
-      - DB_USER=root
-      - DB_PASS=123456
-      - DB_NAME=naruto_api
-      - DB_HOST=localhost
-      - DB_PORT=3306
+      APP_PORT: 3000
+      DB_USER: root
+      DB_PASS: 123456
+      DB_NAME: naruto_api
+      DB_HOST: localhost
+      DB_PORT: 3306
 
   # Serviço que irá rodar o banco de dados
   db:
@@ -52,7 +52,7 @@ services:
       - 3306:3306
       - 33060:33060
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: 123456
 
 # Lista de redes que os containeres irão utilizar
 networks:

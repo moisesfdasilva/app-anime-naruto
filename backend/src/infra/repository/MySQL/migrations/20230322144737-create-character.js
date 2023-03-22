@@ -13,7 +13,7 @@ module.exports = {
       level: { type: Sequelize.STRING },
       resident: { type: Sequelize.STRING },
       skills: { type: Sequelize.STRING },
-      about: { type: Sequelize.STRING },
+      about: { type: Sequelize.TEXT },
       image1: { type: Sequelize.STRING },
       image2: { type: Sequelize.STRING },
       page: { type: Sequelize.STRING },

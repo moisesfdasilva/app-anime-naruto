@@ -100,7 +100,7 @@ module.exports = {
           skills: 'Técnica do Punho Gentil',
           about: 'Detentora do Byakugan, Hinata é membro de um dos clãs mais prestigiosos de Konoha. Apesar disso, ela é bastante tímida e não leva muito jeito para o combate inicialmente. Por causa destes problemas, ela foi deserdada pelo pai como sucessora do clã dela. Além disso, ela também tem uma paixão oculta por Naruto e sempre fica nervosa quando ele está por perto.',
           image1: 'https:\/\/staticg.sportskeeda.com\/editor\/2022\/07\/cf75a-16584698259568.png',
-          image2: 'https:\/\/images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com\/f\/4c75f9a8-50da-4396-bc44-41bb35cbf02e\/df3emsf-33e97fee-d5ef-4b50-8b72-27aeb1aedbd1.jpg\/v1\/fill\/w_554,h_554,q_75,strp\/hinata_hyuga__naruto__by_delilahmonclova18_df3emsf-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTU0IiwicGF0aCI6IlwvZlwvNGM3NWY5YTgtNTBkYS00Mzk2LWJjNDQtNDFiYjM1Y2JmMDJlXC9kZjNlbXNmLTMzZTk3ZmVlLWQ1ZWYtNGI1MC04YjcyLTI3YWViMWFlZGJkMS5qcGciLCJ3aWR0aCI6Ijw9NTU0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.x0N9W9fk2CYMjbwoDSsPenmFxVvLm4AR-OjGqBU7qwQ',
+          image2: 'https:\/\/sm.ign.com\/ign_br\/screenshot\/default\/quiz-hinata-hyuga-naruto-shippuden_ypu3.jpg',
           page: 'https:\/\/naruto.fandom.com\/pt-br\/wiki\/Wiki_Naruto'
         },
         {

@@ -1,7 +1,7 @@
 import { Model, INTEGER, STRING } from 'sequelize';
 import db from '.';
 
-class Character extends Model {
+class CharacterModel extends Model {
   declare readonly id: number;
   declare teamName: string;
   declare name: string;
@@ -14,7 +14,7 @@ class Character extends Model {
   declare page: string;
 }
 
-Character.init({
+CharacterModel.init({
   id: {
     allowNull: false,
     autoIncrement: true,
@@ -36,4 +36,4 @@ Character.init({
   modelName: 'characters',
 });
 
-export default Character;
+export default CharacterModel;

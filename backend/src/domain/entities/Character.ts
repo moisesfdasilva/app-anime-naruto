@@ -1,34 +1,26 @@
-class Character {
-  private _id?: number;
-  private _name: string;
-  private _level: string;
-  private _resident: string;
-  private _skills: string;
-  private _about: string;
-  private _image1: string;
-  private _image2: string;
-  private _page: string;
+import ICharacter from '../interfaces/ICharacter';
 
-  constructor(
-    name: string,
-    level: string,
-    resident: string,
-    skills: string,
-    about: string,
-    image1: string,
-    image2: string,
-    page: string,
-    id?: number,
-  ) {
-    this._id = id;
-    this._name = name;
-    this._level = level;
-    this._resident = resident;
-    this._skills = skills;
-    this._about = about;
-    this._image1 = image1;
-    this._image2 = image2;
-    this._page = page;
+class Character {
+  protected id: number | undefined;
+  protected name: string;
+  protected level: string;
+  protected resident: string;
+  protected skills: string;
+  protected about: string;
+  protected image1: string;
+  protected image2: string;
+  protected page: string;
+
+  constructor(character: ICharacter) {
+    this.id = character.id;
+    this.name = character.name;
+    this.level = character.level;
+    this.resident = character.resident;
+    this.skills = character.skills;
+    this.about = character.about;
+    this.image1 = character.image1;
+    this.image2 = character.image2;
+    this.page = character.page;
   }
 }
 

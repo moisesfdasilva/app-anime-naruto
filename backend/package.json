@@ -15,17 +15,19 @@
   "dependencies": {
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.0",
-    "@types/sequelize": "4.28",
     "dotenv": "10.0",
+    "eslint": "^7.32.0",
     "express": "^4.18.2",
     "jest": "^29.5.0",
-    "sequelize": "6.3",
+    "sequelize": "^6.25.5",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.2"
   },
   "devDependencies": {
+    "@types/sequelize": "^4.28.10",
     "mysql2": "2.3",
-    "sequelize-cli": "6.2"
+    "sequelize-cli": "^6.3.0"
   }
 }

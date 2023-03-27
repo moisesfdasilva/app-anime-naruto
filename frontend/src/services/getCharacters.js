@@ -1,4 +1,4 @@
-const CHARACTERS_BASE_API = 'https://naruto-api.herokuapp.com/api/v1/characters';
+const CHARACTERS_BASE_API = 'http://localhost:3001/characters';
 
 const getCharacters = async () => {
   const response = await fetch(CHARACTERS_BASE_API);

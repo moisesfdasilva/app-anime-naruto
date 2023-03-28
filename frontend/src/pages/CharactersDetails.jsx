@@ -11,8 +11,8 @@ class CharactersDetails extends React.Component {
 
   render() {
     const { characterDetail } = this.props;
-    const { info } = characterDetail;
-    const moreInfo = Object.entries(info);
+    // const { info } = characterDetail;
+    // const moreInfo = Object.entries(info);
     return (
       <div>
         <Header />
@@ -20,17 +20,22 @@ class CharactersDetails extends React.Component {
           <section className="card-content">
             <div className="content">
               <h2>{`Personagem - ${characterDetail.name}:`}</h2>
-              <p>{ characterDetail.info['Ocupação']}</p>
+              <p>{ characterDetail.level}</p>
               <img
                 id="image-detail-limit-1"
-                src={ characterDetail.images[0] }
+                src={ characterDetail.image1 }
                 alt={ characterDetail.name }
               />
+              <h3>Localização:</h3>
+              <p>{ characterDetail.resident }</p>
+              <h3>Principais Técnicas:</h3>
+              <p>{ characterDetail.skills }</p>
               <h3>Sobre o Personagem:</h3>
-              { characterDetail.about.map((info, index) => (
+              <p>{ characterDetail.about }</p>
+              {/* { characterDetail.about.map((info, index) => (
                 <p key={ index }>{ info }</p>
-              )) }
-              <h3>Imagens do Personagem:</h3>
+              )) } */}
+              {/* <h3>Imagens do Personagem:</h3>
               { characterDetail.images.map((image, index) => (
                 <div key={ index }>
                   <img
@@ -39,13 +44,13 @@ class CharactersDetails extends React.Component {
                     alt={ characterDetail.name }
                   />
                 </div>
-              )) }
-              <h3>Mais Informações do Personagem:</h3>
+              )) } */}
+              {/* <h3>Mais Informações do Personagem:</h3>
               { moreInfo.map((text, index) => (
                 <p key={ index }>{`${text[0]}:${text[1]}`}</p>
-              )) }
+              )) } */}
               <h3>Referências Bibliográficas:</h3>
-              <p>{`Narutopedia: <${characterDetail.page}>.`}</p>
+              <p>{`Wiki Naruto: <${characterDetail.page}>.`}</p>
             </div>
           </section>
         </main>

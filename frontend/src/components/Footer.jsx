@@ -6,7 +6,7 @@ class Footer extends React.Component {
     return (
       <footer className="footer has-background-warning-light">
         <div className="content has-text-centered">
-          <h4>Série Naruto:</h4>
+          <h4>Anime Naruto:</h4>
           <p>Criada por Masashi Kishimoto</p>
           <p>Produzida pelo Studio Pierrot e Aniplex</p>
           <Link to="/aternatecharacterslist">

@@ -3,15 +3,12 @@ import db from '.';
 
 class CharacterModel extends Model {
   declare readonly id: number;
-  declare teamName: string;
   declare name: string;
   declare level: string;
   declare resident: string;
   declare skills: string;
   declare about: string;
-  declare image1: string;
-  declare image2: string;
-  declare page: string;
+  declare reference: string;
 }
 
 CharacterModel.init({
@@ -26,9 +23,7 @@ CharacterModel.init({
   resident: { type: STRING },
   skills: { type: STRING },
   about: { type: STRING },
-  image1: { type: STRING },
-  image2: { type: STRING },
-  page: { type: STRING },
+  reference: { type: STRING },
 }, {
   sequelize: db,
   underscored: true,

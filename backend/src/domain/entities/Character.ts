@@ -7,9 +7,7 @@ class Character {
   protected resident: string;
   protected skills: string;
   protected about: string;
-  protected image1: string;
-  protected image2: string;
-  protected page: string;
+  protected reference: string;
 
   constructor(character: ICharacter) {
     this.id = character.id;
@@ -18,9 +16,7 @@ class Character {
     this.resident = character.resident;
     this.skills = character.skills;
     this.about = character.about;
-    this.image1 = character.image1;
-    this.image2 = character.image2;
-    this.page = character.page;
+    this.reference = character.reference;
   }
 }
 

@@ -9,7 +9,7 @@ class Header extends React.Component {
         className="card-header has-background-warning-light is-justify-content-center"
       >
         <div>
-          <h1 className="title is-2 is-spaced">Personagens da Série Naruto</h1>
+          <h1 className="title is-2 is-spaced">Personagens do Anime Naruto</h1>
           <Link to='/'>
             <h2 className="subtitle is-3">Lista de Personagens</h2>
           </Link>

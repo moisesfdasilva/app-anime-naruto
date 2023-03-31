@@ -30,7 +30,7 @@ class Home extends React.Component {
               key={ character.id }
               characterInfo={ character }
               name={ character.name }
-              image={ character.image1 }
+              image={ character.charImages[0] }
               about={ character.level }
               goToCharactersDetails={ this.goToCharactersDetails }
             />

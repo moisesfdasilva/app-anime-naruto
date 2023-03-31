@@ -23,7 +23,7 @@ class CharactersDetails extends React.Component {
               <p>{ characterDetail.level}</p>
               <img
                 id="image-detail-limit-1"
-                src={ characterDetail.image1 }
+                src={ characterDetail.charImages[0] }
                 alt={ characterDetail.name }
               />
               <h3>Localização:</h3>
@@ -32,11 +32,8 @@ class CharactersDetails extends React.Component {
               <p>{ characterDetail.skills }</p>
               <h3>Sobre o Personagem:</h3>
               <p>{ characterDetail.about }</p>
-              {/* { characterDetail.about.map((info, index) => (
-                <p key={ index }>{ info }</p>
-              )) } */}
-              {/* <h3>Imagens do Personagem:</h3>
-              { characterDetail.images.map((image, index) => (
+              <h3>Imagens do Personagem:</h3>
+              { characterDetail.charImages.map((image, index) => (
                 <div key={ index }>
                   <img
                     id="image-detail-limit-2"
@@ -44,13 +41,9 @@ class CharactersDetails extends React.Component {
                     alt={ characterDetail.name }
                   />
                 </div>
-              )) } */}
-              {/* <h3>Mais Informações do Personagem:</h3>
-              { moreInfo.map((text, index) => (
-                <p key={ index }>{`${text[0]}:${text[1]}`}</p>
-              )) } */}
+              )) }
               <h3>Referências Bibliográficas:</h3>
-              <p>{`Wiki Naruto: <${characterDetail.page}>.`}</p>
+              <p>{`Wiki Naruto: <${characterDetail.reference}>.`}</p>
             </div>
           </section>
         </main>

@@ -12,7 +12,7 @@ module.exports = {
       {
        id: 2,
        char_id: 1,
-       image: "https://cdn.anime-planet.com/characters/primary/naruto-uzumaki-1-285x399.webp"
+       image: "https://cdn.folhabv.com.br/images/noti-text-1664906351.webp"
       },
       {
        id: 3,
@@ -777,12 +777,12 @@ module.exports = {
       {
        id: 155,
        char_id: 56,
-       image: "https://animes.olanerd.com/wp-content/uploads/2022/08/Como-Danzo-se-tornou-o-vilao-de-maior-sucesso-da.png"
+       image: "https://static.wikia.nocookie.net/animated/images/a/a3/Danzo1.jpg"
       },
       {
        id: 156,
        char_id: 56,
-       image: "https://criticalhits.com.br/wp-content/uploads/2019/02/Danzos_arma-2-740x475.jpg"
+       image: "https://animes.olanerd.com/wp-content/uploads/2022/08/Como-Danzo-se-tornou-o-vilao-de-maior-sucesso-da.png"
       },
       {
        id: 157,

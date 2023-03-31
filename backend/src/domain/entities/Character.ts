@@ -1,4 +1,5 @@
 import ICharacter from '../interfaces/ICharacter';
+import IImage from '../interfaces/IImage';
 
 class Character {
   protected id: number | undefined;
@@ -8,6 +9,7 @@ class Character {
   protected skills: string;
   protected about: string;
   protected reference: string;
+  public charImages: IImage[] | undefined;
 
   constructor(character: ICharacter) {
     this.id = character.id;
@@ -17,6 +19,7 @@ class Character {
     this.skills = character.skills;
     this.about = character.about;
     this.reference = character.reference;
+    this.charImages = character.charImages;
   }
 }
 

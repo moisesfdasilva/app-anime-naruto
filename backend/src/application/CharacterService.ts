@@ -1,5 +1,6 @@
 import { ModelStatic } from 'sequelize';
 import CharacterModel from '../infra/repository/MySQL/models/characterModel';
+import ImageModel from '../infra/repository/MySQL/models/imageModel';
 import Character from '../domain/entities/Character';
 import ICharacter from '../domain/interfaces/ICharacter';
 
@@ -14,7 +15,11 @@ class CharacterService {
   }
 
   public async getAllCharacters() {
-    const allCharacters = await this.model.findAll();
+    const allCharacters = await this.model.findAll({
+      include: [
+        { model: ImageModel, as: 'charImages', attributes: { exclude: ['id', 'charId'] } },
+      ],
+    });
     const allCharsDomain = allCharacters.map((char) => this.createCharacterDomain(char));
     return allCharsDomain;
   }

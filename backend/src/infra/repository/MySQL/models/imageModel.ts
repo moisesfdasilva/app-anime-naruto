@@ -24,7 +24,7 @@ ImageModel.init({
   modelName: 'images',
 });
 
-ImageModel.hasMany(CharacterModel, { foreignKey: 'charId', as: 'CharImages'});
-CharacterModel.belongsTo(ImageModel, { foreignKey: 'charId', as: 'CharImages'});
+ImageModel.belongsTo(CharacterModel, { foreignKey: 'charId', as: 'charImages' });
+CharacterModel.hasMany(ImageModel, { foreignKey: 'charId', as: 'charImages' });
 
 export default ImageModel;

@@ -9,7 +9,7 @@ CSS (framework: Bulma);
 Redux; e
 React Router DOM.
 ## Status do Projeto
-Aplicação em funcionamento, com os testes em React Testing Library (RTL) em desenvolvimento.
+!!!SENDO CRIADO O BACKEND!!!
 
 # Acesso à Aplicação
 ## Instalação e Execução

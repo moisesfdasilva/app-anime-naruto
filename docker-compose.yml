@@ -2,53 +2,55 @@ version: "3.9"
 
 services:
   frontend:
-    image: node:16.14
     container_name: front_anime-naruto
-    tty: true
-    stdin_open: true
+    build: ./frontend
     command: bash
     restart: always
     working_dir: /app
     volumes:
       - ./frontend:/app
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     ports:
       - 3000:3000
 
   backend:
-    image: node:16.14
     container_name: back_anime-naruto
-    # Mesmo que `docker run -t`
-    tty: true
-    # Mesmo que `docker run -i`
-    stdin_open: true
-    command: bash
+    build: ./backend
     restart: always
     working_dir: /app
     volumes:
       - ./backend:/app
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     ports:
       - 3001:3001
     environment:
-      APP_PORT: 3001
-      DB_USER: root
-      DB_PASS: 123456
-      DB_NAME: naruto_api
-      DB_HOST: db
-      DB_PORT: 3306
+      - APP_PORT=3001
+      - DB_USER=root
+      - DB_PASS=123456
+      - DB_NAME=db_anime-naruto
+      - DB_HOST=db
+      - DB_PORT=3306
+    healthcheck:
+      test: ["CMD", "lsof", "-t", "-i:3001"]
+      timeout: 10s
+      retries: 5
 
   db:
-    container_name: db_anime-naruto
+    container_name: db
     image: mysql:8.0.21
     restart: always
     ports:
       - 3306:3306
-      - 33060:33060
     environment:
-      MYSQL_ROOT_PASSWORD: '123456'
+      - MYSQL_ROOT_PASSWORD=123456
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 5
 
 networks:
   default:

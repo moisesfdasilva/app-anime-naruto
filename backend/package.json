@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "ts-node src/server.ts",
+    "prestart": "npx -y tsc && npm run db:reset",
     "dev": "ts-node-dev src/server.ts",
     "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
   },
